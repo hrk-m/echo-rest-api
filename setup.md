@@ -33,6 +33,25 @@ touch migrate/migrate.go
 
 # run migrate
 GO_ENV=dev go run migrate/migrate.go
+
+# repository 作成
+mkdir repository
+touch repository/user_repository.go
+
+# usecase 作成
+mkdir usecase
+touch usecase/user_usecase.go
+
+# controller 作成
+mkdir controller
+touch controller/uer_controller.go
+
+# router 作成
+mkdir router
+touch router/router.go
+
+# サーバ起動
+GO_ENV=dev go run main.go
 ```
 
 ## note
