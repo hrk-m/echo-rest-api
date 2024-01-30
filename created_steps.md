@@ -2,7 +2,7 @@
 
 - Go 1.21.xx
 
-## set up
+## 作成手順
 
 ```bash
 # int
@@ -52,6 +52,16 @@ touch router/router.go
 
 # サーバ起動
 GO_ENV=dev go run main.go
+
+# task
+touch repository/task_repository.go
+touch usecase/task_usecase.go
+touch controller/task_controller.go
+
+# validator
+mkdir validator
+touch validator/user_validator.go
+touch validator/task_validator.go
 ```
 
 ## note
@@ -64,5 +74,4 @@ docker compose rm -s -f -v
 # NOTE
 # フォルダ内で「import '../path/...'」とかいた後にコマンド実行する
 go mod tidy
-
 ```
