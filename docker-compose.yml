@@ -9,7 +9,12 @@ services:
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: echo-rest-api-db
     restart: always
+    volumes:
+      - "mysql-data:/var/lib/mysql"
     networks:
       - lesson
+volumes:
+  mysql-data:
+    driver: local
 networks:
   lesson:
